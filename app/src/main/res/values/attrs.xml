@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AddAttribute">
+        <attr name="showText" format="boolean" />
+        <attr name="titleSize" format="dimension"/>
+        <attr name="labelPosition" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomCalendarViewV2">
+        <attr name="monthNumberTextSize" format="dimension" />
+        <attr name="monthStringTextSize" format="dimension" />
+        <attr name="yearHeaderSize" format="dimension" />
+        <attr name="viewHeight" format="dimension" />
+        <attr name="monthCircleSize" format="dimension" />
+        <attr name="strokeCircleSize" format="dimension" />
+        <attr name="yearNumberTextSize" format="dimension"/>
+        <attr name="yearStringTextSize" format="dimension"/>
+    </declare-styleable>
+
+</resources>
