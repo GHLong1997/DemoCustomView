@@ -10,9 +10,9 @@
        <!--android:layout_width="300dp"-->
        <!--android:layout_height="500dp" />-->
 
-    <!--<com.example.admin.myapplication.Canvas-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent" />-->
+    <com.example.admin.myapplication.Canvas
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
    <!--<com.example.admin.myapplication.DrawBitmap-->
        <!--android:layout_width="match_parent"-->
@@ -22,11 +22,11 @@
        <!--android:layout_width="wrap_content"-->
        <!--android:layout_height="wrap_content" />-->
 
-   <com.example.admin.myapplication.AddAttribute
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       app:showText="true"
-       />
+   <!--<com.example.admin.myapplication.AddAttribute-->
+       <!--android:layout_width="match_parent"-->
+       <!--android:layout_height="wrap_content"-->
+       <!--app:showText="true"-->
+       <!--/>-->
 
 
 </FrameLayout>
