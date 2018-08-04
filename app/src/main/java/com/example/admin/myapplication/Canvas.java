@@ -5,13 +5,11 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
 import android.view.View;
 
 public class Canvas extends View {
 
     private Paint paint;
-    private Float startY = 400f;
 
     public Canvas(Context context) {
         this(context, null);
@@ -45,19 +43,6 @@ public class Canvas extends View {
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        startY = 1100f;
-        invalidate();
-        return super.onTouchEvent(event);
-
-    }
-
-    @Override
-    public boolean performClick() {
-        return super.performClick();
-    }
-
-    @Override
     protected void onDraw(android.graphics.Canvas canvas) {
         super.onDraw(canvas);
         int x = 100;
@@ -75,7 +60,7 @@ public class Canvas extends View {
 
         //vẽ đoạn thẳng
 //        canvas.drawLine(0, 500, getWidth(), 500, paint);
-        canvas.drawLine(100, startY, 600, 500, paint);
+        canvas.drawLine(100, 400, 600, 500, paint);
 
         //vẽ hình chữ nhật
 //        canvas.drawRect(100, 100, 400, 350, paint);
