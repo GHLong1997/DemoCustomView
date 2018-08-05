@@ -36,6 +36,7 @@ public class CustomCalendarViewV2 extends View {
 
     private Integer viewHeight;
     private Integer viewWidth;
+
     private Integer numMonths = 6;
     private Integer numRows = 2;
     private Integer numCells = 6;

@@ -20,4 +20,14 @@
         <attr name="yearStringTextSize" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="Calendar">
+        <attr name="yearNumberSize1" format="dimension"/>
+        <attr name="monthNumberSize1" format="dimension" />
+        <attr name="monthStringSize1" format="dimension" />
+        <attr name="monthCircleSize1" format="dimension" />
+        <attr name="yearTitleSize1" format="dimension" />
+        <attr name="viewHeight1" format="dimension" />
+        <attr name="yeaHeaderSize1" format="dimension"/>
+    </declare-styleable>
+
 </resources>

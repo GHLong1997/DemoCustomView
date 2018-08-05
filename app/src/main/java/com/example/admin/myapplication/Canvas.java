@@ -3,13 +3,18 @@ package com.example.admin.myapplication;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Point;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 public class Canvas extends View {
 
     private Paint paint;
+    private Path path = new Path();
 
     public Canvas(Context context) {
         this(context, null);
@@ -25,11 +30,11 @@ public class Canvas extends View {
     }
 
     private void  initPaint1() {
-        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        paint.setStyle(Paint.Style.FILL); //tô màu đố tượng
+        paint = new Paint();
+        paint.setStyle(Paint.Style.STROKE); //tô màu đố tượng
         paint.setColor(Color.BLACK);
-        paint.setStrokeWidth(150); // có tác dụng nếu là đoạn thẳng, set giá trị độ rộng của net vẽ
-        paint.setStrokeCap(Paint.Cap.ROUND); // bo tròn 2 đầu mút của đoạn thẳng
+        paint.setStrokeWidth(3); // có tác dụng nếu là đoạn thẳng, set giá trị độ rộng của net vẽ
+//        paint.setStrokeCap(Paint.Cap.ROUND); // bo tròn 2 đầu mút của đoạn thẳng
     }
 
     @Override
@@ -43,7 +48,7 @@ public class Canvas extends View {
     }
 
     @Override
-    protected void onDraw(android.graphics.Canvas canvas) {
+    protected void onDraw(final android.graphics.Canvas canvas) {
         super.onDraw(canvas);
         int x = 100;
         int y = 200;
@@ -60,25 +65,63 @@ public class Canvas extends View {
 
         //vẽ đoạn thẳng
 //        canvas.drawLine(0, 500, getWidth(), 500, paint);
-        canvas.drawLine(100, 400, 600, 500, paint);
+//        canvas.drawLine(100, 400, 600, 500, paint);
 
         //vẽ hình chữ nhật
 //        canvas.drawRect(100, 100, 400, 350, paint);
 
-        float width = 600;
-        float height = 500;
-        float left = (getWidth() - width) / 2f;
-        float top = (getHeight() - height) /2f;
+//        float width = 600;
+//        float height = 500;
+//        float left = (getWidth() - width) / 2f;
+//        float top = (getHeight() - height) /2f;
 //        canvas.drawRect(left, top, left + width, top + height, paint);
 
         /**
          * vẽ hình tròn
          */
-//        canvas.drawCircle(500, 600, 100, paint);
+//        canvas.drawCircle(500, 600, 128, paint);
 //        canvas.drawCircle(getWidth() / 2f, getHeight() / 2f, 100, paint);
 //
 //        //oval
 //        canvas.drawOval(300, 500,  600, 800, paint);
+//
+//        canvas.drawCircle(0, 550, 100, paint);
+
+
+//        path.moveTo(300,300);
+//        path.lineTo(100, 300);
+//        path.lineTo(300,500);
+//
+//        path.lineTo(500,300);
+        paint.setColor(Color.RED);
+        paint.setStrokeWidth(13);
+        path.moveTo(86, 229);
+//        path.cubicTo(300, 50, 100, 400, 400, 400);
+        path.cubicTo(167, 427, 318, 138, 423, 299);
+        canvas.drawPath(path, paint);
+
+//        path.reset();
+//        paint.setColor(Color.GRAY);
+//        paint.setStrokeWidth(1);
+//        path.moveTo(50, 50);
+//        path.lineTo(300, 50);
+//        path.lineTo(100, 400);
+//        path.lineTo(400, 400);
+
+//        canvas.drawPath(path, paint);
+//        for (double s = 0; s < 1; s = s + 0.1) {
+////            final int d = (int)(Math.pow(1 - s, 3) * 50 + 3 * Math.pow(1 - s, 2) * s * 300 + 3 * Math.pow(1 - s,
+////                    2) * 100 + Math.pow(s, 3) * 400);
+////            final int  e = (int)(Math.pow(1 - s, 3) * 50 + 3 * Math.pow(1 - s, 2) * s * 50 + 3 * Math.pow(1 - s,
+////                    2) * 400 + Math.pow(s, 3) * 400);
+//            Point point = new Point(d, e);
+//            path.lineTo(point.x,point.y);
+//            canvas.drawPath(path, paint);
+
+//        }
+
+
+        canvas.drawPath(path, paint);
 
     }
 
